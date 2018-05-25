@@ -18,13 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcomeScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="QUW-vk-RHG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="QUW-vk-RHG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kJc-DA-nNL">
-                                <rect key="frame" x="120" y="12" width="134" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kJc-DA-nNL">
+                                <rect key="frame" x="128" y="40" width="119" height="20"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go all in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh0-5R-dgo">
                                 <rect key="frame" x="56" y="124" width="263" height="67"/>
@@ -57,9 +55,21 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QUW-vk-RHG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ASD-ob-d0c"/>
+                            <constraint firstItem="QUW-vk-RHG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vku-NE-6QN"/>
+                            <constraint firstItem="QUW-vk-RHG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="dzW-jZ-i89"/>
+                            <constraint firstItem="QUW-vk-RHG" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="j6S-Lk-6xl"/>
+                            <constraint firstItem="kJc-DA-nNL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ksI-Pd-01Q"/>
+                            <constraint firstItem="kJc-DA-nNL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wE2-FS-Ixq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bgimage" destination="QUW-vk-RHG" id="llI-tm-NUI"/>
+                        <outlet property="swoosh" destination="kJc-DA-nNL" id="gbX-wI-gZa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
