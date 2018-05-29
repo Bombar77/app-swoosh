@@ -47,6 +47,9 @@
                                 <state key="normal" title="Get started">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Dca-Vj-6Lo" kind="show" id="1fH-62-Vp4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go all in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh0-5R-dgo">
                                 <rect key="frame" x="57.5" y="125" width="260" height="94.5"/>
@@ -168,17 +171,30 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mi-rS-HJB">
+                                <rect key="frame" x="0.0" y="6" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Afe-HK-ZkL"/>
+                                    <constraint firstAttribute="width" constant="29" id="HGZ-90-OPF"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="cVq-sr-R4e" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="c2F-NS-nWC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mPG-zv-IhW" firstAttribute="trailing" secondItem="HRD-VS-4X9" secondAttribute="trailing" id="4ek-CB-EVA"/>
                             <constraint firstItem="mPG-zv-IhW" firstAttribute="trailing" secondItem="Qrv-jd-UJo" secondAttribute="trailing" id="A8z-Gj-eiN"/>
+                            <constraint firstItem="3mi-rS-HJB" firstAttribute="top" secondItem="1Xp-Rd-3mM" secondAttribute="top" constant="6" id="ABk-TR-hq7"/>
                             <constraint firstItem="xQG-Od-PoM" firstAttribute="top" secondItem="HRD-VS-4X9" secondAttribute="bottom" constant="50" id="DDN-lX-vOu"/>
                             <constraint firstItem="HRD-VS-4X9" firstAttribute="leading" secondItem="mPG-zv-IhW" secondAttribute="leading" id="EJA-3j-dcd"/>
                             <constraint firstItem="HRD-VS-4X9" firstAttribute="top" secondItem="mPG-zv-IhW" secondAttribute="top" constant="20" id="IvX-6h-Y7D"/>
                             <constraint firstItem="VQa-IP-Umr" firstAttribute="bottom" secondItem="1Xp-Rd-3mM" secondAttribute="bottom" id="MY1-fs-C1x"/>
                             <constraint firstItem="mPG-zv-IhW" firstAttribute="trailing" secondItem="xQG-Od-PoM" secondAttribute="trailing" id="Rzr-mc-VuR"/>
                             <constraint firstItem="VQa-IP-Umr" firstAttribute="top" secondItem="1Xp-Rd-3mM" secondAttribute="top" id="TM8-Ee-VsB"/>
+                            <constraint firstItem="3mi-rS-HJB" firstAttribute="leading" secondItem="mPG-zv-IhW" secondAttribute="leading" id="UlS-cS-vX0"/>
                             <constraint firstItem="xQG-Od-PoM" firstAttribute="leading" secondItem="mPG-zv-IhW" secondAttribute="leading" id="Uzm-Y5-2UZ"/>
                             <constraint firstItem="mPG-zv-IhW" firstAttribute="bottom" secondItem="Qrv-jd-UJo" secondAttribute="bottom" constant="20" id="d7M-p6-KZ3"/>
                             <constraint firstItem="VQa-IP-Umr" firstAttribute="trailing" secondItem="1Xp-Rd-3mM" secondAttribute="trailing" id="j2O-ur-7rg"/>
@@ -189,6 +205,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oO7-kX-fVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cVq-sr-R4e" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="132.68365817091455"/>
         </scene>
@@ -285,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
